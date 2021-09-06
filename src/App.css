@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
+header.header {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    box-sizing: border-box;
+    background-color: white;
+    width: 100vw;
+    min-width: 300px;
+    padding: .7em 0 .7em 1em;
+    border-bottom: 2px solid lightgray;
+    z-index: 5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div.components {
+    display: flex;
+    flex-direction: row;
+    min-height: 95vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div.stepsField {
+    position: sticky;
+    top: calc(2.4em + 2px);
+    align-self: flex-start;
+    box-sizing: border-box;
+    width: 30%;
+    min-width: 260px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div.stepsElement {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1em 1.5em 0 1.5em;
 }
 
-.App-link {
-  color: #61dafb;
+div.order1 {
+    min-width: 2em;
+    min-height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: darkgray;
+    color: white;
+    font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.order2 {
+    padding-left: .5em;
+    min-height: 5em;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.stepsElement h5 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+div.stepsElement p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.decorLine {
+    width: 2px;
+    height: 35px;
+    background-color: darkgray;
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    transform: translate3d(1.5em, -3em, 0);
+}
+
+div.content {
+    width: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid lightgrey;
+}
+
+div.contentHeader {
+    font-size: 16px;
+    position: sticky;
+    top: calc(2.4em + 2px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 4;
+}
+
+div.search {
+    padding-left: 1em;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: calc(100% - 1em);
+    border-bottom: 2px solid lightgrey;
+}
+
+input#search {
+    border: none;
+    padding: 1em 1.5em 1em .5em;
+    margin-left: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    width: 40%;
+}
+
+button#go{
+border: none;
+    color: darkgrey;
+    background-color: white;
+    border-radius: .3em;
+    padding: .5em .5em .5em .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.decorLoupe {
+    min-width: 1em;
+    min-height: 1em;
+    display: block;
+    cursor: pointer;
+    float: left;
+    border: 3px solid darkgrey;
+    border-radius: 50%;
+}
+
+.decorLoupeElement {
+    min-width: 3px;
+    min-height: 12px;
+    background-color: darkgrey;
+    position: sticky;
+    transform: translate(-2px, 10px) rotate(-45deg);
+}
+
+div.listHeader {
+    width: 100%;
+    display: flex;
+}
+
+div.listHeader h3 {
+    display: inline-block;
+    width: 30%;
+    padding: 18px 0 18px 54px;
+    background: rgb(241, 240, 240);
+    text-align: left;
+    border-bottom: 2px solid lightgrey;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    min-width: 100px;
+    box-sizing: border-box;
+}
+
+div.listHeader h3:nth-child(3) {
+    width: 40%;
+    padding-left: 36px;
+    min-width: 330px;
+}
+
+div.listField {
+    position: relative;
+    min-height: 64vh;
+    width: 100%;
+}
+
+div.listItem {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    border-bottom: 2px solid lightgrey;
+}
+
+
+div.listItem p {
+    display: inline-block;
+    width: 30%;
+    padding: 18px 0 18px 54px;
+    text-align: left;
+    margin: 0;
+    min-width: 100px;
+    cursor: default;
+    box-sizing: border-box;
+}
+
+div.listItem p:nth-child(3) {
+    width: 40%;
+    padding-left: 36px;
+    min-width: 330px;
+}
+
+div.bottomNav {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    bottom: 0;
+    padding-right: 4em;
+    min-width: 510px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+button.navButton {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    margin: 3.9em 1em 3.5em 1em;
+
+    padding: .5em;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    display: inline;
+    color: rgb(28, 66, 140);
+    width: 95px;
+}
+
+div.step2, div.step3 {
+    height: -webkit-fill-available;
+}
+
+div.operation {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: .7em 2em .7em 2em;
+    margin: 1.5em 0 1em 2.5em;
+    width: 60%;
+    min-width: 320px;
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    box-shadow: 0 2px 2px lightgrey;
+}
+
+div#aviableOperation{
+    background-color: white;
+}
+
+div.operation:last-child{
+    opacity: 0.5;
+    background-color: rgba(211, 211, 211, 0.438);
+    cursor: not-allowed;
+}
+
+
+div.operation p, div.operation h5 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+div.step3>h3 {
+    color: rgb(112, 112, 112);
+    margin: 2em 0 .5em 18px;
+    padding-bottom: .5em;
+    border-bottom: 2px solid darkgrey;
+}
+
+div.step3ListField{
+    display: flex;
+    flex-direction: column;
+}
+
+div.step3ListHeader, div.step3ListItem {
+    display: flex;
+    margin-left: 18px;
+}
+
+div.step3ListHeader>h3, div.step3ListItem>p {
+    flex: 1;
+    display: inline;
+    font-size: 15px;
+    color: rgb(112, 112, 112);
 }
